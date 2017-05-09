@@ -1,0 +1,32 @@
+
+Key on:
+Radio sends: 1101010100
+	Seems to be a generic message?
+Radio sends: 1110011100000010
+	Seems to be message that demands a response
+Cassette sends: 110000110000000100
+	Seems to be a response
+Radio sends: 1110011100000100
+	Seems to be message demanding a response
+Cassette sends: 110000110001000011
+	Seems to be a message detailing basic info
+	
+Radio sends: 1100001011111110000100
+
+Key off:
+Radio sends: 1100001011111111
+	Seems to be a generic power down command
+
+
+Radio on:
+Radio sends:	1100001011111110010101
+	This is a status update
+Radio sends:	111001101111
+	This is a generic call
+
+Radio off:
+Radio sends:	1100001011111110000100
+	This is a status update
+Radio sends:	111001101111
+
+

@@ -1,0 +1,28 @@
+Search for cassette
+1110011100000100
+	1  Start 
+	11 3 Priority
+	001110 
+	0000100 
+
+Search for some other device
+111
+011110 - 30
+10011001 - 153
+0
+
+
+
+Turn on:
+
+Radio sends: 1101010100
+	Seems to be a generic message?
+Radio sends: 1110011100000010
+	Seems to be message that demands a response
+Cassette sends: 110000110000000100
+	Seems to be a response
+Radio sends: 1110011100000100
+	Seems to be a
+Cassette sends: 110000110001000011
+Radio sends: 1100001011111110000100
+

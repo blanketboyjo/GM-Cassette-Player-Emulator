@@ -57,3 +57,5 @@ Temporary Items
 
 # Generic
 !*.txt
+!*.log
+
