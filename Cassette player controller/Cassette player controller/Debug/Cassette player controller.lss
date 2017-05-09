@@ -1,0 +1,376 @@
+
+Cassette player controller.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000002ae  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000023a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000050  00800100  00800100  000002ae  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000002ae  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002e0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000098  00000000  00000000  00000320  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000006e5  00000000  00000000  000003b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000002a2  00000000  00000000  00000a9d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000002f3  00000000  00000000  00000d3f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001b4  00000000  00000000  00001034  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000003ed  00000000  00000000  000011e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000047d  00000000  00000000  000015d5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000078  00000000  00000000  00001a52  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 35 00 	jmp	0x6a	; 0x6a <__ctors_end>
+   4:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+   8:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+   c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  10:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  14:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  18:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  1c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  20:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  24:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  28:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  2c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  30:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  34:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  38:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  3c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  40:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  44:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  48:	0c 94 d0 00 	jmp	0x1a0	; 0x1a0 <__vector_18>
+  4c:	0c 94 aa 00 	jmp	0x154	; 0x154 <__vector_19>
+  50:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  54:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  58:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  5c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  60:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  64:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+
+00000068 <__ctors_start>:
+  68:	f6 00       	.word	0x00f6	; ????
+
+0000006a <__ctors_end>:
+  6a:	11 24       	eor	r1, r1
+  6c:	1f be       	out	0x3f, r1	; 63
+  6e:	cf ef       	ldi	r28, 0xFF	; 255
+  70:	d8 e0       	ldi	r29, 0x08	; 8
+  72:	de bf       	out	0x3e, r29	; 62
+  74:	cd bf       	out	0x3d, r28	; 61
+
+00000076 <__do_clear_bss>:
+  76:	21 e0       	ldi	r18, 0x01	; 1
+  78:	a0 e0       	ldi	r26, 0x00	; 0
+  7a:	b1 e0       	ldi	r27, 0x01	; 1
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a0 35       	cpi	r26, 0x50	; 80
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+
+00000086 <__do_global_ctors>:
+  86:	10 e0       	ldi	r17, 0x00	; 0
+  88:	c5 e3       	ldi	r28, 0x35	; 53
+  8a:	d0 e0       	ldi	r29, 0x00	; 0
+  8c:	04 c0       	rjmp	.+8      	; 0x96 <__do_global_ctors+0x10>
+  8e:	21 97       	sbiw	r28, 0x01	; 1
+  90:	fe 01       	movw	r30, r28
+  92:	0e 94 15 01 	call	0x22a	; 0x22a <__tablejump2__>
+  96:	c4 33       	cpi	r28, 0x34	; 52
+  98:	d1 07       	cpc	r29, r17
+  9a:	c9 f7       	brne	.-14     	; 0x8e <__do_global_ctors+0x8>
+  9c:	0e 94 54 00 	call	0xa8	; 0xa8 <main>
+  a0:	0c 94 1b 01 	jmp	0x236	; 0x236 <_exit>
+
+000000a4 <__bad_interrupt>:
+  a4:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a8 <main>:
+
+
+
+int main(void)
+{
+	DDRD |= (1<<PORTD6);
+  a8:	56 9a       	sbi	0x0a, 6	; 10
+	PORTD |=(1<<PORTD6);
+  aa:	5e 9a       	sbi	0x0b, 6	; 11
+#include <util/delay.h>
+#include "USART.h"*/
+
+
+
+int main(void)
+  ac:	ff cf       	rjmp	.-2      	; 0xac <main+0x4>
+
+000000ae <_ZN5USART20m_interruptStoreDataEv>:
+	return (m_eoRXBuff - m_nxtRXBuff)%RX_BUFF_LEN;	//Return number of unread indices
+}
+
+
+//This function adds data to the read buffer an increments the last index
+void USART::m_interruptStoreData(void){
+  ae:	fc 01       	movw	r30, r24
+	if(((m_eoRXBuff - m_nxtRXBuff)%RX_BUFF_LEN) >RX_BUFF_LEN){	//Data about to overwrite unread data 
+  b0:	25 85       	ldd	r18, Z+13	; 0x0d
+  b2:	84 85       	ldd	r24, Z+12	; 0x0c
+  b4:	30 e0       	ldi	r19, 0x00	; 0
+  b6:	28 1b       	sub	r18, r24
+  b8:	31 09       	sbc	r19, r1
+  ba:	2f 71       	andi	r18, 0x1F	; 31
+  bc:	30 78       	andi	r19, 0x80	; 128
+  be:	33 23       	and	r19, r19
+  c0:	34 f4       	brge	.+12     	; 0xce <_ZN5USART20m_interruptStoreDataEv+0x20>
+  c2:	21 50       	subi	r18, 0x01	; 1
+  c4:	31 09       	sbc	r19, r1
+  c6:	20 6e       	ori	r18, 0xE0	; 224
+  c8:	3f 6f       	ori	r19, 0xFF	; 255
+  ca:	2f 5f       	subi	r18, 0xFF	; 255
+  cc:	3f 4f       	sbci	r19, 0xFF	; 255
+  ce:	21 32       	cpi	r18, 0x21	; 33
+  d0:	31 05       	cpc	r19, r1
+  d2:	2c f0       	brlt	.+10     	; 0xde <_ZN5USART20m_interruptStoreDataEv+0x30>
+		*m_UDR;													//Flush data to prevent over flow
+  d4:	02 84       	ldd	r0, Z+10	; 0x0a
+  d6:	f3 85       	ldd	r31, Z+11	; 0x0b
+  d8:	e0 2d       	mov	r30, r0
+  da:	80 81       	ld	r24, Z
+  dc:	08 95       	ret
+	}else{
+		m_RXBuff[m_eoRXBuff] = *m_UDR;				//Store value of USART data register
+  de:	95 85       	ldd	r25, Z+13	; 0x0d
+  e0:	a2 85       	ldd	r26, Z+10	; 0x0a
+  e2:	b3 85       	ldd	r27, Z+11	; 0x0b
+  e4:	8c 91       	ld	r24, X
+  e6:	df 01       	movw	r26, r30
+  e8:	a9 0f       	add	r26, r25
+  ea:	b1 1d       	adc	r27, r1
+  ec:	d0 96       	adiw	r26, 0x30	; 48
+  ee:	8c 93       	st	X, r24
+		m_eoRXBuff = (m_eoRXBuff + 1)%RX_BUFF_LEN;  //Increment end of RX_BUFF clear to 0 if hits max
+  f0:	85 85       	ldd	r24, Z+13	; 0x0d
+  f2:	90 e0       	ldi	r25, 0x00	; 0
+  f4:	01 96       	adiw	r24, 0x01	; 1
+  f6:	8f 71       	andi	r24, 0x1F	; 31
+  f8:	90 78       	andi	r25, 0x80	; 128
+  fa:	99 23       	and	r25, r25
+  fc:	24 f4       	brge	.+8      	; 0x106 <_ZN5USART20m_interruptStoreDataEv+0x58>
+  fe:	01 97       	sbiw	r24, 0x01	; 1
+ 100:	80 6e       	ori	r24, 0xE0	; 224
+ 102:	9f 6f       	ori	r25, 0xFF	; 255
+ 104:	01 96       	adiw	r24, 0x01	; 1
+ 106:	85 87       	std	Z+13, r24	; 0x0d
+ 108:	08 95       	ret
+
+0000010a <_ZN5USART23m_interruptTransmitDataEv>:
+	}
+}
+
+//This function sends data over USART and increments the writing index
+void USART::m_interruptTransmitData(void){
+ 10a:	cf 93       	push	r28
+ 10c:	df 93       	push	r29
+ 10e:	fc 01       	movw	r30, r24
+	if(m_eoTXBuff != m_nxtTXBuff){						//If indices don't match
+ 110:	97 85       	ldd	r25, Z+15	; 0x0f
+ 112:	86 85       	ldd	r24, Z+14	; 0x0e
+ 114:	98 17       	cp	r25, r24
+ 116:	a9 f0       	breq	.+42     	; 0x142 <_ZN5USART23m_interruptTransmitDataEv+0x38>
+		*m_UDR      = m_TXBuff[m_nxtTXBuff];			//Store next piece of data into UBR reg
+ 118:	a2 85       	ldd	r26, Z+10	; 0x0a
+ 11a:	b3 85       	ldd	r27, Z+11	; 0x0b
+ 11c:	86 85       	ldd	r24, Z+14	; 0x0e
+ 11e:	ef 01       	movw	r28, r30
+ 120:	c8 0f       	add	r28, r24
+ 122:	d1 1d       	adc	r29, r1
+ 124:	88 89       	ldd	r24, Y+16	; 0x10
+ 126:	8c 93       	st	X, r24
+		m_nxtTXBuff = (1 + m_nxtTXBuff)%TX_BUFF_LEN;	//Increment index, set to 0 on roll over
+ 128:	86 85       	ldd	r24, Z+14	; 0x0e
+ 12a:	90 e0       	ldi	r25, 0x00	; 0
+ 12c:	01 96       	adiw	r24, 0x01	; 1
+ 12e:	8f 71       	andi	r24, 0x1F	; 31
+ 130:	90 78       	andi	r25, 0x80	; 128
+ 132:	99 23       	and	r25, r25
+ 134:	24 f4       	brge	.+8      	; 0x13e <_ZN5USART23m_interruptTransmitDataEv+0x34>
+ 136:	01 97       	sbiw	r24, 0x01	; 1
+ 138:	80 6e       	ori	r24, 0xE0	; 224
+ 13a:	9f 6f       	ori	r25, 0xFF	; 255
+ 13c:	01 96       	adiw	r24, 0x01	; 1
+ 13e:	86 87       	std	Z+14, r24	; 0x0e
+ 140:	06 c0       	rjmp	.+12     	; 0x14e <_ZN5USART23m_interruptTransmitDataEv+0x44>
+	}else{
+		*m_UCSRB &= ~(1<<UDRIE);							//Disable Buffer empty interrupt
+ 142:	02 80       	ldd	r0, Z+2	; 0x02
+ 144:	f3 81       	ldd	r31, Z+3	; 0x03
+ 146:	e0 2d       	mov	r30, r0
+ 148:	80 81       	ld	r24, Z
+ 14a:	8f 7d       	andi	r24, 0xDF	; 223
+ 14c:	80 83       	st	Z, r24
+	}
+}
+ 14e:	df 91       	pop	r29
+ 150:	cf 91       	pop	r28
+ 152:	08 95       	ret
+
+00000154 <__vector_19>:
+
+
+//These tie the ISRs to their respective USART class object 
+ISR(USART_UDRE_vect){
+ 154:	1f 92       	push	r1
+ 156:	0f 92       	push	r0
+ 158:	0f b6       	in	r0, 0x3f	; 63
+ 15a:	0f 92       	push	r0
+ 15c:	11 24       	eor	r1, r1
+ 15e:	2f 93       	push	r18
+ 160:	3f 93       	push	r19
+ 162:	4f 93       	push	r20
+ 164:	5f 93       	push	r21
+ 166:	6f 93       	push	r22
+ 168:	7f 93       	push	r23
+ 16a:	8f 93       	push	r24
+ 16c:	9f 93       	push	r25
+ 16e:	af 93       	push	r26
+ 170:	bf 93       	push	r27
+ 172:	ef 93       	push	r30
+ 174:	ff 93       	push	r31
+	USART0.m_interruptTransmitData();
+ 176:	80 e0       	ldi	r24, 0x00	; 0
+ 178:	91 e0       	ldi	r25, 0x01	; 1
+ 17a:	0e 94 85 00 	call	0x10a	; 0x10a <_ZN5USART23m_interruptTransmitDataEv>
+}
+ 17e:	ff 91       	pop	r31
+ 180:	ef 91       	pop	r30
+ 182:	bf 91       	pop	r27
+ 184:	af 91       	pop	r26
+ 186:	9f 91       	pop	r25
+ 188:	8f 91       	pop	r24
+ 18a:	7f 91       	pop	r23
+ 18c:	6f 91       	pop	r22
+ 18e:	5f 91       	pop	r21
+ 190:	4f 91       	pop	r20
+ 192:	3f 91       	pop	r19
+ 194:	2f 91       	pop	r18
+ 196:	0f 90       	pop	r0
+ 198:	0f be       	out	0x3f, r0	; 63
+ 19a:	0f 90       	pop	r0
+ 19c:	1f 90       	pop	r1
+ 19e:	18 95       	reti
+
+000001a0 <__vector_18>:
+
+ISR(USART_RX_vect){
+ 1a0:	1f 92       	push	r1
+ 1a2:	0f 92       	push	r0
+ 1a4:	0f b6       	in	r0, 0x3f	; 63
+ 1a6:	0f 92       	push	r0
+ 1a8:	11 24       	eor	r1, r1
+ 1aa:	2f 93       	push	r18
+ 1ac:	3f 93       	push	r19
+ 1ae:	4f 93       	push	r20
+ 1b0:	5f 93       	push	r21
+ 1b2:	6f 93       	push	r22
+ 1b4:	7f 93       	push	r23
+ 1b6:	8f 93       	push	r24
+ 1b8:	9f 93       	push	r25
+ 1ba:	af 93       	push	r26
+ 1bc:	bf 93       	push	r27
+ 1be:	ef 93       	push	r30
+ 1c0:	ff 93       	push	r31
+	USART0.m_interruptStoreData();
+ 1c2:	80 e0       	ldi	r24, 0x00	; 0
+ 1c4:	91 e0       	ldi	r25, 0x01	; 1
+ 1c6:	0e 94 57 00 	call	0xae	; 0xae <_ZN5USART20m_interruptStoreDataEv>
+}
+ 1ca:	ff 91       	pop	r31
+ 1cc:	ef 91       	pop	r30
+ 1ce:	bf 91       	pop	r27
+ 1d0:	af 91       	pop	r26
+ 1d2:	9f 91       	pop	r25
+ 1d4:	8f 91       	pop	r24
+ 1d6:	7f 91       	pop	r23
+ 1d8:	6f 91       	pop	r22
+ 1da:	5f 91       	pop	r21
+ 1dc:	4f 91       	pop	r20
+ 1de:	3f 91       	pop	r19
+ 1e0:	2f 91       	pop	r18
+ 1e2:	0f 90       	pop	r0
+ 1e4:	0f be       	out	0x3f, r0	; 63
+ 1e6:	0f 90       	pop	r0
+ 1e8:	1f 90       	pop	r1
+ 1ea:	18 95       	reti
+
+000001ec <_GLOBAL__sub_I__ZN5USARTC2EPVhS1_S1_S1_S1_S1_>:
+	m_UCSRA(UCSRA),		//Tie class pointer to real regs
+	m_UCSRB(UCSRB),
+	m_UCSRC(UCSRC),
+	m_UBRRH(UBRRH),
+	m_UBRRL(UBRRL),
+	m_UDR(UDR){
+ 1ec:	e0 e0       	ldi	r30, 0x00	; 0
+ 1ee:	f1 e0       	ldi	r31, 0x01	; 1
+ 1f0:	80 ec       	ldi	r24, 0xC0	; 192
+ 1f2:	90 e0       	ldi	r25, 0x00	; 0
+ 1f4:	91 83       	std	Z+1, r25	; 0x01
+ 1f6:	80 83       	st	Z, r24
+ 1f8:	81 ec       	ldi	r24, 0xC1	; 193
+ 1fa:	90 e0       	ldi	r25, 0x00	; 0
+ 1fc:	93 83       	std	Z+3, r25	; 0x03
+ 1fe:	82 83       	std	Z+2, r24	; 0x02
+ 200:	82 ec       	ldi	r24, 0xC2	; 194
+ 202:	90 e0       	ldi	r25, 0x00	; 0
+ 204:	95 83       	std	Z+5, r25	; 0x05
+ 206:	84 83       	std	Z+4, r24	; 0x04
+ 208:	85 ec       	ldi	r24, 0xC5	; 197
+ 20a:	90 e0       	ldi	r25, 0x00	; 0
+ 20c:	97 83       	std	Z+7, r25	; 0x07
+ 20e:	86 83       	std	Z+6, r24	; 0x06
+ 210:	84 ec       	ldi	r24, 0xC4	; 196
+ 212:	90 e0       	ldi	r25, 0x00	; 0
+ 214:	91 87       	std	Z+9, r25	; 0x09
+ 216:	80 87       	std	Z+8, r24	; 0x08
+ 218:	86 ec       	ldi	r24, 0xC6	; 198
+ 21a:	90 e0       	ldi	r25, 0x00	; 0
+ 21c:	93 87       	std	Z+11, r25	; 0x0b
+ 21e:	82 87       	std	Z+10, r24	; 0x0a
+	m_nxtRXBuff = 0;	//Init the buffer indices
+ 220:	14 86       	std	Z+12, r1	; 0x0c
+	m_nxtTXBuff = 0;
+ 222:	16 86       	std	Z+14, r1	; 0x0e
+	m_eoRXBuff  = 0;
+ 224:	15 86       	std	Z+13, r1	; 0x0d
+	m_eoTXBuff  = 0;
+ 226:	17 86       	std	Z+15, r1	; 0x0f
+ 228:	08 95       	ret
+
+0000022a <__tablejump2__>:
+ 22a:	ee 0f       	add	r30, r30
+ 22c:	ff 1f       	adc	r31, r31
+ 22e:	05 90       	lpm	r0, Z+
+ 230:	f4 91       	lpm	r31, Z
+ 232:	e0 2d       	mov	r30, r0
+ 234:	09 94       	ijmp
+
+00000236 <_exit>:
+ 236:	f8 94       	cli
+
+00000238 <__stop_program>:
+ 238:	ff cf       	rjmp	.-2      	; 0x238 <__stop_program>

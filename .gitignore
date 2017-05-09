@@ -45,3 +45,15 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# C includes
+!*.c
+
+# Eagle includes
+!*.brd
+!*.epf
+!*.lbr
+!*.sch
+
+# Generic
+!*.txt

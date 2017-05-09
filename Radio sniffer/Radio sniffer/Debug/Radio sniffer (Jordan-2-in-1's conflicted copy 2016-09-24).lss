@@ -1,0 +1,713 @@
+
+Radio sniffer.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000006  00800100  00000412  000004a6  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000412  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000003b  00800106  00800106  000004ac  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000004ac  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000004dc  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000078  00000000  00000000  0000051c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000075d  00000000  00000000  00000594  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000038b  00000000  00000000  00000cf1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000022b  00000000  00000000  0000107c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000011c  00000000  00000000  000012a8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000002fd  00000000  00000000  000013c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000281  00000000  00000000  000016c1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000058  00000000  00000000  00001942  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__ctors_end>
+   4:	0c 94 85 00 	jmp	0x10a	; 0x10a <__vector_1>
+   8:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+   c:	0c 94 e5 00 	jmp	0x1ca	; 0x1ca <__vector_3>
+  10:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  14:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  18:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  1c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  20:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  24:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  28:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  2c:	0c 94 16 01 	jmp	0x22c	; 0x22c <__vector_11>
+  30:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  34:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  38:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  3c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  40:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  44:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  48:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  4c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  50:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  54:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  58:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  5c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  60:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  64:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  68:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  6c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  70:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  74:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  78:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  7c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  80:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  84:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  88:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  8c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  90:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  94:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  98:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  9c:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  a0:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  a4:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  a8:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  ac:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+  b0:	0c 94 83 00 	jmp	0x106	; 0x106 <__bad_interrupt>
+
+000000b4 <__ctors_start>:
+  b4:	cc 01       	movw	r24, r24
+
+000000b6 <__ctors_end>:
+  b6:	11 24       	eor	r1, r1
+  b8:	1f be       	out	0x3f, r1	; 63
+  ba:	cf ef       	ldi	r28, 0xFF	; 255
+  bc:	d8 e0       	ldi	r29, 0x08	; 8
+  be:	de bf       	out	0x3e, r29	; 62
+  c0:	cd bf       	out	0x3d, r28	; 61
+
+000000c2 <__do_copy_data>:
+  c2:	11 e0       	ldi	r17, 0x01	; 1
+  c4:	a0 e0       	ldi	r26, 0x00	; 0
+  c6:	b1 e0       	ldi	r27, 0x01	; 1
+  c8:	e2 e1       	ldi	r30, 0x12	; 18
+  ca:	f4 e0       	ldi	r31, 0x04	; 4
+  cc:	02 c0       	rjmp	.+4      	; 0xd2 <__do_copy_data+0x10>
+  ce:	05 90       	lpm	r0, Z+
+  d0:	0d 92       	st	X+, r0
+  d2:	a6 30       	cpi	r26, 0x06	; 6
+  d4:	b1 07       	cpc	r27, r17
+  d6:	d9 f7       	brne	.-10     	; 0xce <__do_copy_data+0xc>
+
+000000d8 <__do_clear_bss>:
+  d8:	21 e0       	ldi	r18, 0x01	; 1
+  da:	a6 e0       	ldi	r26, 0x06	; 6
+  dc:	b1 e0       	ldi	r27, 0x01	; 1
+  de:	01 c0       	rjmp	.+2      	; 0xe2 <.do_clear_bss_start>
+
+000000e0 <.do_clear_bss_loop>:
+  e0:	1d 92       	st	X+, r1
+
+000000e2 <.do_clear_bss_start>:
+  e2:	a1 34       	cpi	r26, 0x41	; 65
+  e4:	b2 07       	cpc	r27, r18
+  e6:	e1 f7       	brne	.-8      	; 0xe0 <.do_clear_bss_loop>
+
+000000e8 <__do_global_ctors>:
+  e8:	10 e0       	ldi	r17, 0x00	; 0
+  ea:	cb e5       	ldi	r28, 0x5B	; 91
+  ec:	d0 e0       	ldi	r29, 0x00	; 0
+  ee:	04 c0       	rjmp	.+8      	; 0xf8 <__do_global_ctors+0x10>
+  f0:	21 97       	sbiw	r28, 0x01	; 1
+  f2:	fe 01       	movw	r30, r28
+  f4:	0e 94 01 02 	call	0x402	; 0x402 <__tablejump2__>
+  f8:	ca 35       	cpi	r28, 0x5A	; 90
+  fa:	d1 07       	cpc	r29, r17
+  fc:	c9 f7       	brne	.-14     	; 0xf0 <__do_global_ctors+0x8>
+  fe:	0e 94 27 01 	call	0x24e	; 0x24e <main>
+ 102:	0c 94 07 02 	jmp	0x40e	; 0x40e <_exit>
+
+00000106 <__bad_interrupt>:
+ 106:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000010a <__vector_1>:
+uint8_t volatile string[32];
+uint8_t volatile stringIndex	=		0;
+uint8_t volatile stage			=		0;
+uint8_t volatile enabled		=		0;
+//Sense pin interrupt
+ISR(INT0_vect){
+ 10a:	1f 92       	push	r1
+ 10c:	0f 92       	push	r0
+ 10e:	0f b6       	in	r0, 0x3f	; 63
+ 110:	0f 92       	push	r0
+ 112:	11 24       	eor	r1, r1
+ 114:	2f 93       	push	r18
+ 116:	8f 93       	push	r24
+ 118:	9f 93       	push	r25
+ 11a:	ef 93       	push	r30
+ 11c:	ff 93       	push	r31
+	//Switch case
+	switch(stage){
+ 11e:	80 91 07 01 	lds	r24, 0x0107
+ 122:	81 30       	cpi	r24, 0x01	; 1
+ 124:	89 f0       	breq	.+34     	; 0x148 <__vector_1+0x3e>
+ 126:	18 f0       	brcs	.+6      	; 0x12e <__vector_1+0x24>
+ 128:	82 30       	cpi	r24, 0x02	; 2
+ 12a:	c9 f1       	breq	.+114    	; 0x19e <__vector_1+0x94>
+ 12c:	44 c0       	rjmp	.+136    	; 0x1b6 <__vector_1+0xac>
+	//Waiting for Start bit
+	case WAITINGFORSTART: 
+		//Reset timer
+		TCNT1 = 0x000;
+ 12e:	10 92 85 00 	sts	0x0085, r1
+ 132:	10 92 84 00 	sts	0x0084, r1
+		//Switch interrupt to look for line rise
+		EICRA = SENSERISING;
+ 136:	83 e0       	ldi	r24, 0x03	; 3
+ 138:	80 93 69 00 	sts	0x0069, r24
+		//Increment Stage
+		stage ++;
+ 13c:	80 91 07 01 	lds	r24, 0x0107
+ 140:	8f 5f       	subi	r24, 0xFF	; 255
+ 142:	80 93 07 01 	sts	0x0107, r24
+	break;
+ 146:	37 c0       	rjmp	.+110    	; 0x1b6 <__vector_1+0xac>
+	//Last read was low
+	case TIMINGLOW:
+		//Check timer
+		//If passed 120 uSec
+		if(TCNT1 <2500){
+ 148:	80 91 84 00 	lds	r24, 0x0084
+ 14c:	90 91 85 00 	lds	r25, 0x0085
+ 150:	84 3c       	cpi	r24, 0xC4	; 196
+ 152:	99 40       	sbci	r25, 0x09	; 9
+ 154:	40 f4       	brcc	.+16     	; 0x166 <__vector_1+0x5c>
+			//Data is low
+			//Add 48 to String
+			string[stringIndex] = 48;
+ 156:	e0 91 08 01 	lds	r30, 0x0108
+ 15a:	f0 e0       	ldi	r31, 0x00	; 0
+ 15c:	e7 5f       	subi	r30, 0xF7	; 247
+ 15e:	fe 4f       	sbci	r31, 0xFE	; 254
+ 160:	80 e3       	ldi	r24, 0x30	; 48
+ 162:	80 83       	st	Z, r24
+ 164:	07 c0       	rjmp	.+14     	; 0x174 <__vector_1+0x6a>
+		//Else
+		}else{
+			//Data is high
+			//Add 49 to string
+			string[stringIndex] = 49;
+ 166:	e0 91 08 01 	lds	r30, 0x0108
+ 16a:	f0 e0       	ldi	r31, 0x00	; 0
+ 16c:	e7 5f       	subi	r30, 0xF7	; 247
+ 16e:	fe 4f       	sbci	r31, 0xFE	; 254
+ 170:	81 e3       	ldi	r24, 0x31	; 49
+ 172:	80 83       	st	Z, r24
+		}
+		//Increment string index
+		stringIndex ++;
+ 174:	80 91 08 01 	lds	r24, 0x0108
+ 178:	8f 5f       	subi	r24, 0xFF	; 255
+ 17a:	80 93 08 01 	sts	0x0108, r24
+		//Reset timer
+		TCNT1 = 0x000;
+ 17e:	10 92 85 00 	sts	0x0085, r1
+ 182:	10 92 84 00 	sts	0x0084, r1
+		//Lower timeout flag
+		TIFR1 |= (1<<1);
+ 186:	b1 9a       	sbi	0x16, 1	; 22
+		//Enable timeout interrupt
+		TIMSK1 = (1<<OCIE0A);
+ 188:	82 e0       	ldi	r24, 0x02	; 2
+ 18a:	80 93 6f 00 	sts	0x006F, r24
+		//Switch interrupt to look for line fall
+		EICRA = SENSEFALLING;
+ 18e:	80 93 69 00 	sts	0x0069, r24
+		//Increment Stage
+		stage ++;
+ 192:	80 91 07 01 	lds	r24, 0x0107
+ 196:	8f 5f       	subi	r24, 0xFF	; 255
+ 198:	80 93 07 01 	sts	0x0107, r24
+	break;
+ 19c:	0c c0       	rjmp	.+24     	; 0x1b6 <__vector_1+0xac>
+	//Waiting for next bit
+	case WAITINGFORNEXTBIT:
+		//Disable timeout interrupt
+		TIMSK1 = 0;
+ 19e:	10 92 6f 00 	sts	0x006F, r1
+		//Reset timer
+		TCNT1 = 0x000;
+ 1a2:	10 92 85 00 	sts	0x0085, r1
+ 1a6:	10 92 84 00 	sts	0x0084, r1
+		//Switch interrupt to look for line rise
+		EICRA = SENSERISING;
+ 1aa:	83 e0       	ldi	r24, 0x03	; 3
+ 1ac:	80 93 69 00 	sts	0x0069, r24
+		//Switch to TIMINGLOW stage
+		stage = TIMINGLOW;
+ 1b0:	81 e0       	ldi	r24, 0x01	; 1
+ 1b2:	80 93 07 01 	sts	0x0107, r24
+	break;
+	}
+}
+ 1b6:	ff 91       	pop	r31
+ 1b8:	ef 91       	pop	r30
+ 1ba:	9f 91       	pop	r25
+ 1bc:	8f 91       	pop	r24
+ 1be:	2f 91       	pop	r18
+ 1c0:	0f 90       	pop	r0
+ 1c2:	0f be       	out	0x3f, r0	; 63
+ 1c4:	0f 90       	pop	r0
+ 1c6:	1f 90       	pop	r1
+ 1c8:	18 95       	reti
+
+000001ca <__vector_3>:
+
+//Enable pin interrupt
+ISR(PCINT0_vect){
+ 1ca:	1f 92       	push	r1
+ 1cc:	0f 92       	push	r0
+ 1ce:	0f b6       	in	r0, 0x3f	; 63
+ 1d0:	0f 92       	push	r0
+ 1d2:	11 24       	eor	r1, r1
+ 1d4:	8f 93       	push	r24
+ 1d6:	9f 93       	push	r25
+	//If Enable pin is low (aka button pressed)
+	if((PINB >>ENABLEPIN)==0){
+ 1d8:	83 b1       	in	r24, 0x03	; 3
+ 1da:	90 e0       	ldi	r25, 0x00	; 0
+ 1dc:	88 0f       	add	r24, r24
+ 1de:	89 2f       	mov	r24, r25
+ 1e0:	88 1f       	adc	r24, r24
+ 1e2:	99 0b       	sbc	r25, r25
+ 1e4:	89 2b       	or	r24, r25
+ 1e6:	d9 f4       	brne	.+54     	; 0x21e <__vector_3+0x54>
+		//If not enabled
+		if(enabled ==0 && stage == WAITINGFORSTART){
+ 1e8:	80 91 06 01 	lds	r24, 0x0106
+ 1ec:	81 11       	cpse	r24, r1
+ 1ee:	0f c0       	rjmp	.+30     	; 0x20e <__vector_3+0x44>
+ 1f0:	80 91 07 01 	lds	r24, 0x0107
+ 1f4:	81 11       	cpse	r24, r1
+ 1f6:	0b c0       	rjmp	.+22     	; 0x20e <__vector_3+0x44>
+			//Enable
+			enabled = 1;
+ 1f8:	81 e0       	ldi	r24, 0x01	; 1
+ 1fa:	80 93 06 01 	sts	0x0106, r24
+			//Configure pin interrupt for fall
+			EICRA = SENSEFALLING;
+ 1fe:	92 e0       	ldi	r25, 0x02	; 2
+ 200:	90 93 69 00 	sts	0x0069, r25
+			//Enable sense pin interrupt
+			EIMSK = (1<<INT0);
+ 204:	8d bb       	out	0x1d, r24	; 29
+			//Turn on led
+			PORTB |= (1<<LEDPIN);
+ 206:	2d 9a       	sbi	0x05, 5	; 5
+			//clear index
+			stringIndex = 0;
+ 208:	10 92 08 01 	sts	0x0108, r1
+ 20c:	08 c0       	rjmp	.+16     	; 0x21e <__vector_3+0x54>
+		//If enabled
+		}else{
+			enabled = 0;
+ 20e:	10 92 06 01 	sts	0x0106, r1
+			EIMSK = 0;
+ 212:	1d ba       	out	0x1d, r1	; 29
+			TIMSK1 = 0;
+ 214:	10 92 6f 00 	sts	0x006F, r1
+			//Turn off led
+			PORTB &= ~(1<<LEDPIN);
+ 218:	2d 98       	cbi	0x05, 5	; 5
+			stage = WAITINGFORSTART;
+ 21a:	10 92 07 01 	sts	0x0107, r1
+		}
+	}
+}
+ 21e:	9f 91       	pop	r25
+ 220:	8f 91       	pop	r24
+ 222:	0f 90       	pop	r0
+ 224:	0f be       	out	0x3f, r0	; 63
+ 226:	0f 90       	pop	r0
+ 228:	1f 90       	pop	r1
+ 22a:	18 95       	reti
+
+0000022c <__vector_11>:
+
+//Timeout interrupt
+ISR(TIMER1_COMPA_vect){
+ 22c:	1f 92       	push	r1
+ 22e:	0f 92       	push	r0
+ 230:	0f b6       	in	r0, 0x3f	; 63
+ 232:	0f 92       	push	r0
+ 234:	11 24       	eor	r1, r1
+ 236:	8f 93       	push	r24
+	//Disable timeout interrupt
+	TIMSK1 = 0;
+ 238:	10 92 6f 00 	sts	0x006F, r1
+	//Switch stage to message complete
+	stage = MESSAGEREADY;
+ 23c:	83 e0       	ldi	r24, 0x03	; 3
+ 23e:	80 93 07 01 	sts	0x0107, r24
+}
+ 242:	8f 91       	pop	r24
+ 244:	0f 90       	pop	r0
+ 246:	0f be       	out	0x3f, r0	; 63
+ 248:	0f 90       	pop	r0
+ 24a:	1f 90       	pop	r1
+ 24c:	18 95       	reti
+
+0000024e <main>:
+
+int main(void)
+{
+ 24e:	cf 93       	push	r28
+ 250:	df 93       	push	r29
+ 252:	00 d0       	rcall	.+0      	; 0x254 <main+0x6>
+ 254:	00 d0       	rcall	.+0      	; 0x256 <main+0x8>
+ 256:	00 d0       	rcall	.+0      	; 0x258 <main+0xa>
+ 258:	cd b7       	in	r28, 0x3d	; 61
+ 25a:	de b7       	in	r29, 0x3e	; 62
+	//Initialize USART
+    USART0.init(250000);
+ 25c:	40 e9       	ldi	r20, 0x90	; 144
+ 25e:	50 ed       	ldi	r21, 0xD0	; 208
+ 260:	63 e0       	ldi	r22, 0x03	; 3
+ 262:	70 e0       	ldi	r23, 0x00	; 0
+ 264:	85 e3       	ldi	r24, 0x35	; 53
+ 266:	91 e0       	ldi	r25, 0x01	; 1
+ 268:	0e 94 78 01 	call	0x2f0	; 0x2f0 <_ZN5USART4initEm>
+	uint8_t message[] = {'s','t','a','r','t','\n'};
+ 26c:	86 e0       	ldi	r24, 0x06	; 6
+ 26e:	e0 e0       	ldi	r30, 0x00	; 0
+ 270:	f1 e0       	ldi	r31, 0x01	; 1
+ 272:	de 01       	movw	r26, r28
+ 274:	11 96       	adiw	r26, 0x01	; 1
+ 276:	01 90       	ld	r0, Z+
+ 278:	0d 92       	st	X+, r0
+ 27a:	8a 95       	dec	r24
+ 27c:	e1 f7       	brne	.-8      	; 0x276 <main+0x28>
+	USART0.write(message,6);
+ 27e:	46 e0       	ldi	r20, 0x06	; 6
+ 280:	be 01       	movw	r22, r28
+ 282:	6f 5f       	subi	r22, 0xFF	; 255
+ 284:	7f 4f       	sbci	r23, 0xFF	; 255
+ 286:	85 e3       	ldi	r24, 0x35	; 53
+ 288:	91 e0       	ldi	r25, 0x01	; 1
+ 28a:	0e 94 b5 01 	call	0x36a	; 0x36a <_ZN5USART5writeEPhh>
+	//Configure sense pin
+	DDRD &= ~(1<<SENSEPIN);
+ 28e:	52 98       	cbi	0x0a, 2	; 10
+	//Configure enable pin
+	DDRB &= ~(1<<ENABLEPIN);
+ 290:	27 98       	cbi	0x04, 7	; 4
+	//Configure led pin
+	DDRB |= (1<<LEDPIN);
+ 292:	25 9a       	sbi	0x04, 5	; 4
+	//Set timer compare to time it takes for timeout (extra time given to account for clock speed differences
+	OCR1A = 21000;
+ 294:	88 e0       	ldi	r24, 0x08	; 8
+ 296:	92 e5       	ldi	r25, 0x52	; 82
+ 298:	90 93 89 00 	sts	0x0089, r25
+ 29c:	80 93 88 00 	sts	0x0088, r24
+	//Enable 16bit timer for timing low signal time and timeout
+	TCCR1B = 0b00000001;
+ 2a0:	81 e0       	ldi	r24, 0x01	; 1
+ 2a2:	80 93 81 00 	sts	0x0081, r24
+	//Enable pin change interrupt for enable pin (pcint7)
+	PCMSK0 = 0b10000000;
+ 2a6:	90 e8       	ldi	r25, 0x80	; 128
+ 2a8:	90 93 6b 00 	sts	0x006B, r25
+	//Enable pcint0
+	PCICR  = (1<<PCIE0);
+ 2ac:	80 93 68 00 	sts	0x0068, r24
+	//Enable interrupts
+	sei();
+ 2b0:	78 94       	sei
+
+			enabled = 1;
+ 2b2:	80 93 06 01 	sts	0x0106, r24
+			//Configure pin interrupt for fall
+			EICRA = SENSEFALLING;
+ 2b6:	92 e0       	ldi	r25, 0x02	; 2
+ 2b8:	90 93 69 00 	sts	0x0069, r25
+			//Enable sense pin interrupt
+			EIMSK = (1<<INT0);
+ 2bc:	8d bb       	out	0x1d, r24	; 29
+			//Turn on led
+			PORTB |= (1<<LEDPIN);
+ 2be:	2d 9a       	sbi	0x05, 5	; 5
+			//clear index
+			stringIndex = 0;
+ 2c0:	10 92 08 01 	sts	0x0108, r1
+	
+    while (1){
+		//If message complete
+		if(stage == MESSAGEREADY){
+ 2c4:	80 91 07 01 	lds	r24, 0x0107
+ 2c8:	83 30       	cpi	r24, 0x03	; 3
+ 2ca:	e1 f7       	brne	.-8      	; 0x2c4 <main+0x76>
+			//Send over usart
+			USART0.write((uint8_t*)string,(uint8_t)stringIndex);
+ 2cc:	40 91 08 01 	lds	r20, 0x0108
+ 2d0:	69 e0       	ldi	r22, 0x09	; 9
+ 2d2:	71 e0       	ldi	r23, 0x01	; 1
+ 2d4:	85 e3       	ldi	r24, 0x35	; 53
+ 2d6:	91 e0       	ldi	r25, 0x01	; 1
+ 2d8:	0e 94 b5 01 	call	0x36a	; 0x36a <_ZN5USART5writeEPhh>
+			uint8_t newline = '\n';
+			USART0.write(newline);
+ 2dc:	6a e0       	ldi	r22, 0x0A	; 10
+ 2de:	85 e3       	ldi	r24, 0x35	; 53
+ 2e0:	91 e0       	ldi	r25, 0x01	; 1
+ 2e2:	0e 94 a8 01 	call	0x350	; 0x350 <_ZN5USART5writeEh>
+			//Clear index
+			stringIndex = 0;
+ 2e6:	10 92 08 01 	sts	0x0108, r1
+			//Set stage to WAITINGFORSTART
+			stage = WAITINGFORSTART;
+ 2ea:	10 92 07 01 	sts	0x0107, r1
+ 2ee:	ea cf       	rjmp	.-44     	; 0x2c4 <main+0x76>
+
+000002f0 <_ZN5USART4initEm>:
+	m_UBRRL = UBRRL;
+	m_UDR   = UDR;
+
+}
+
+void USART::init(uint32_t speed){
+ 2f0:	fc 01       	movw	r30, r24
+	uint16_t setting = 207;	//UBRR default; 9600 baud
+	switch (speed){			//check for recognized speeds
+ 2f2:	41 15       	cp	r20, r1
+ 2f4:	82 ec       	ldi	r24, 0xC2	; 194
+ 2f6:	58 07       	cpc	r21, r24
+ 2f8:	81 e0       	ldi	r24, 0x01	; 1
+ 2fa:	68 07       	cpc	r22, r24
+ 2fc:	71 05       	cpc	r23, r1
+ 2fe:	79 f0       	breq	.+30     	; 0x31e <_ZN5USART4initEm+0x2e>
+ 300:	40 39       	cpi	r20, 0x90	; 144
+ 302:	80 ed       	ldi	r24, 0xD0	; 208
+ 304:	58 07       	cpc	r21, r24
+ 306:	83 e0       	ldi	r24, 0x03	; 3
+ 308:	68 07       	cpc	r22, r24
+ 30a:	71 05       	cpc	r23, r1
+ 30c:	31 f0       	breq	.+12     	; 0x31a <_ZN5USART4initEm+0x2a>
+ 30e:	41 15       	cp	r20, r1
+ 310:	51 4e       	sbci	r21, 0xE1	; 225
+ 312:	61 05       	cpc	r22, r1
+ 314:	71 05       	cpc	r23, r1
+ 316:	39 f4       	brne	.+14     	; 0x326 <_ZN5USART4initEm+0x36>
+ 318:	04 c0       	rjmp	.+8      	; 0x322 <_ZN5USART4initEm+0x32>
+		case 250000:		//  Speed: 250000
+			setting = 7;		//    UBRR setting for 250000
+ 31a:	87 e0       	ldi	r24, 0x07	; 7
+ 31c:	05 c0       	rjmp	.+10     	; 0x328 <_ZN5USART4initEm+0x38>
+		break;				//    Exit switch
+		case 115200:		//  Speed: 115200
+			setting = 16;		//    UBRR setting for 115200
+ 31e:	80 e1       	ldi	r24, 0x10	; 16
+		break;				//    Exit switch
+ 320:	03 c0       	rjmp	.+6      	; 0x328 <_ZN5USART4initEm+0x38>
+		case 57600:			//  Speed: 57600
+			setting = 34;		//    UBRR setting for 57600
+ 322:	82 e2       	ldi	r24, 0x22	; 34
+		break;				//    Exit switch
+ 324:	01 c0       	rjmp	.+2      	; 0x328 <_ZN5USART4initEm+0x38>
+	m_UDR   = UDR;
+
+}
+
+void USART::init(uint32_t speed){
+	uint16_t setting = 207;	//UBRR default; 9600 baud
+ 326:	8f ec       	ldi	r24, 0xCF	; 207
+		break;				//    Exit switch
+		case 57600:			//  Speed: 57600
+			setting = 34;		//    UBRR setting for 57600
+		break;				//    Exit switch
+	}
+	*m_UBRRH = (uint8_t) (setting>>8);	// Shift UBRR down 8 and store in UBRRH
+ 328:	a6 81       	ldd	r26, Z+6	; 0x06
+ 32a:	b7 81       	ldd	r27, Z+7	; 0x07
+ 32c:	1c 92       	st	X, r1
+	*m_UBRRL = (uint8_t)  setting;		// Store lower 8 bits into UBRRL*/
+ 32e:	a0 85       	ldd	r26, Z+8	; 0x08
+ 330:	b1 85       	ldd	r27, Z+9	; 0x09
+ 332:	8c 93       	st	X, r24
+	*m_UCSRA = (1<<1);					// Double speed
+ 334:	a0 81       	ld	r26, Z
+ 336:	b1 81       	ldd	r27, Z+1	; 0x01
+ 338:	82 e0       	ldi	r24, 0x02	; 2
+ 33a:	8c 93       	st	X, r24
+	*m_UCSRB = (1<<RXEN0)|(1<<TXEN0);	// Enable RX and TX
+ 33c:	a2 81       	ldd	r26, Z+2	; 0x02
+ 33e:	b3 81       	ldd	r27, Z+3	; 0x03
+ 340:	88 e1       	ldi	r24, 0x18	; 24
+ 342:	8c 93       	st	X, r24
+	*m_UCSRC = (1<<USBS0)|(3<<UCSZ00);	// TODO annotate this
+ 344:	04 80       	ldd	r0, Z+4	; 0x04
+ 346:	f5 81       	ldd	r31, Z+5	; 0x05
+ 348:	e0 2d       	mov	r30, r0
+ 34a:	8e e0       	ldi	r24, 0x0E	; 14
+ 34c:	80 83       	st	Z, r24
+ 34e:	08 95       	ret
+
+00000350 <_ZN5USART5writeEh>:
+void USART::end(void){
+	
+}
+
+
+void USART::write(uint8_t data){
+ 350:	dc 01       	movw	r26, r24
+	while(!(*m_UCSRA & (1<<UDRE0)));
+ 352:	ed 91       	ld	r30, X+
+ 354:	fc 91       	ld	r31, X
+ 356:	11 97       	sbiw	r26, 0x01	; 1
+ 358:	90 81       	ld	r25, Z
+ 35a:	95 ff       	sbrs	r25, 5
+ 35c:	fd cf       	rjmp	.-6      	; 0x358 <_ZN5USART5writeEh+0x8>
+	*m_UDR = data;
+ 35e:	1a 96       	adiw	r26, 0x0a	; 10
+ 360:	ed 91       	ld	r30, X+
+ 362:	fc 91       	ld	r31, X
+ 364:	1b 97       	sbiw	r26, 0x0b	; 11
+ 366:	60 83       	st	Z, r22
+ 368:	08 95       	ret
+
+0000036a <_ZN5USART5writeEPhh>:
+}
+
+void USART::write(uint8_t data[], uint8_t length){
+ 36a:	cf 93       	push	r28
+ 36c:	df 93       	push	r29
+ 36e:	ec 01       	movw	r28, r24
+	for(int i = 0; i<length;i++){
+ 370:	44 23       	and	r20, r20
+ 372:	79 f0       	breq	.+30     	; 0x392 <_ZN5USART5writeEPhh+0x28>
+ 374:	db 01       	movw	r26, r22
+ 376:	64 0f       	add	r22, r20
+ 378:	71 1d       	adc	r23, r1
+		while(!(*m_UCSRA & (1<<UDRE0)));
+ 37a:	e8 81       	ld	r30, Y
+ 37c:	f9 81       	ldd	r31, Y+1	; 0x01
+ 37e:	90 81       	ld	r25, Z
+ 380:	95 ff       	sbrs	r25, 5
+ 382:	fd cf       	rjmp	.-6      	; 0x37e <_ZN5USART5writeEPhh+0x14>
+		*m_UDR = data[i];
+ 384:	ea 85       	ldd	r30, Y+10	; 0x0a
+ 386:	fb 85       	ldd	r31, Y+11	; 0x0b
+ 388:	8d 91       	ld	r24, X+
+ 38a:	80 83       	st	Z, r24
+	while(!(*m_UCSRA & (1<<UDRE0)));
+	*m_UDR = data;
+}
+
+void USART::write(uint8_t data[], uint8_t length){
+	for(int i = 0; i<length;i++){
+ 38c:	a6 17       	cp	r26, r22
+ 38e:	b7 07       	cpc	r27, r23
+ 390:	a1 f7       	brne	.-24     	; 0x37a <_ZN5USART5writeEPhh+0x10>
+		while(!(*m_UCSRA & (1<<UDRE0)));
+		*m_UDR = data[i];
+	}
+}
+ 392:	df 91       	pop	r29
+ 394:	cf 91       	pop	r28
+ 396:	08 95       	ret
+
+00000398 <_GLOBAL__sub_I__ZN5USART4initEm>:
+ */
+
+#include "USART.h"
+
+USART::USART(volatile uint8_t *UCSRA, volatile uint8_t *UCSRB, volatile uint8_t *UCSRC, volatile uint8_t *UBRRH, volatile uint8_t *UBRRL, volatile uint8_t *UDR){
+	m_UCSRA = UCSRA;
+ 398:	e5 e3       	ldi	r30, 0x35	; 53
+ 39a:	f1 e0       	ldi	r31, 0x01	; 1
+ 39c:	80 ec       	ldi	r24, 0xC0	; 192
+ 39e:	90 e0       	ldi	r25, 0x00	; 0
+ 3a0:	91 83       	std	Z+1, r25	; 0x01
+ 3a2:	80 83       	st	Z, r24
+	m_UCSRB = UCSRB;
+ 3a4:	81 ec       	ldi	r24, 0xC1	; 193
+ 3a6:	90 e0       	ldi	r25, 0x00	; 0
+ 3a8:	93 83       	std	Z+3, r25	; 0x03
+ 3aa:	82 83       	std	Z+2, r24	; 0x02
+	m_UCSRC = UCSRC;
+ 3ac:	82 ec       	ldi	r24, 0xC2	; 194
+ 3ae:	90 e0       	ldi	r25, 0x00	; 0
+ 3b0:	95 83       	std	Z+5, r25	; 0x05
+ 3b2:	84 83       	std	Z+4, r24	; 0x04
+	m_UBRRH = UBRRH;
+ 3b4:	85 ec       	ldi	r24, 0xC5	; 197
+ 3b6:	90 e0       	ldi	r25, 0x00	; 0
+ 3b8:	97 83       	std	Z+7, r25	; 0x07
+ 3ba:	86 83       	std	Z+6, r24	; 0x06
+	m_UBRRL = UBRRL;
+ 3bc:	84 ec       	ldi	r24, 0xC4	; 196
+ 3be:	90 e0       	ldi	r25, 0x00	; 0
+ 3c0:	91 87       	std	Z+9, r25	; 0x09
+ 3c2:	80 87       	std	Z+8, r24	; 0x08
+	m_UDR   = UDR;
+ 3c4:	86 ec       	ldi	r24, 0xC6	; 198
+ 3c6:	90 e0       	ldi	r25, 0x00	; 0
+ 3c8:	93 87       	std	Z+11, r25	; 0x0b
+ 3ca:	82 87       	std	Z+10, r24	; 0x0a
+ */
+
+#include "USART.h"
+
+USART::USART(volatile uint8_t *UCSRA, volatile uint8_t *UCSRB, volatile uint8_t *UCSRC, volatile uint8_t *UBRRH, volatile uint8_t *UBRRL, volatile uint8_t *UDR){
+	m_UCSRA = UCSRA;
+ 3cc:	e9 e2       	ldi	r30, 0x29	; 41
+ 3ce:	f1 e0       	ldi	r31, 0x01	; 1
+ 3d0:	88 ec       	ldi	r24, 0xC8	; 200
+ 3d2:	90 e0       	ldi	r25, 0x00	; 0
+ 3d4:	91 83       	std	Z+1, r25	; 0x01
+ 3d6:	80 83       	st	Z, r24
+	m_UCSRB = UCSRB;
+ 3d8:	89 ec       	ldi	r24, 0xC9	; 201
+ 3da:	90 e0       	ldi	r25, 0x00	; 0
+ 3dc:	93 83       	std	Z+3, r25	; 0x03
+ 3de:	82 83       	std	Z+2, r24	; 0x02
+	m_UCSRC = UCSRC;
+ 3e0:	8a ec       	ldi	r24, 0xCA	; 202
+ 3e2:	90 e0       	ldi	r25, 0x00	; 0
+ 3e4:	95 83       	std	Z+5, r25	; 0x05
+ 3e6:	84 83       	std	Z+4, r24	; 0x04
+	m_UBRRH = UBRRH;
+ 3e8:	8d ec       	ldi	r24, 0xCD	; 205
+ 3ea:	90 e0       	ldi	r25, 0x00	; 0
+ 3ec:	97 83       	std	Z+7, r25	; 0x07
+ 3ee:	86 83       	std	Z+6, r24	; 0x06
+	m_UBRRL = UBRRL;
+ 3f0:	8c ec       	ldi	r24, 0xCC	; 204
+ 3f2:	90 e0       	ldi	r25, 0x00	; 0
+ 3f4:	91 87       	std	Z+9, r25	; 0x09
+ 3f6:	80 87       	std	Z+8, r24	; 0x08
+	m_UDR   = UDR;
+ 3f8:	8e ec       	ldi	r24, 0xCE	; 206
+ 3fa:	90 e0       	ldi	r25, 0x00	; 0
+ 3fc:	93 87       	std	Z+11, r25	; 0x0b
+ 3fe:	82 87       	std	Z+10, r24	; 0x0a
+ 400:	08 95       	ret
+
+00000402 <__tablejump2__>:
+ 402:	ee 0f       	add	r30, r30
+ 404:	ff 1f       	adc	r31, r31
+ 406:	05 90       	lpm	r0, Z+
+ 408:	f4 91       	lpm	r31, Z
+ 40a:	e0 2d       	mov	r30, r0
+ 40c:	09 94       	ijmp
+
+0000040e <_exit>:
+ 40e:	f8 94       	cli
+
+00000410 <__stop_program>:
+ 410:	ff cf       	rjmp	.-2      	; 0x410 <__stop_program>
